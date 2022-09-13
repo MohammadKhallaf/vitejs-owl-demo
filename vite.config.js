@@ -1,19 +1,11 @@
 import { defineConfig } from 'vite';
-import inject from '@rollup/plugin-inject';
 export default defineConfig({
   optimizeDeps: {
     exclude: ['jquery'],
   },
-  resolve: {
-    alias: {
-      $: 'jQuery',
+  build: {
+    rollupOptions: {
+      external: ['jquery'],
     },
   },
-  plugins: [
-    // Add it first
-    inject({
-      $: 'jquery',
-    }),
-    // Other plugins...
-  ],
 });
