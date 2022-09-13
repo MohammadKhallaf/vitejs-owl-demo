@@ -3,6 +3,8 @@ import javascriptLogo from './javascript.svg';
 import 'jquery';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import jQuery from 'jquery';
+window.$ = jQuery;
 
 $(document).ready(function () {
   $('.owl-carousel').owlCarousel();
