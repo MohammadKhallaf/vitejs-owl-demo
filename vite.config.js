@@ -6,7 +6,10 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [path.resolve(__dirname, '/node_modules/jquery')],
+      external: [
+        path.resolve(__dirname, '/node_modules/jquery'),
+        path.resolve(__dirname, '/node_modules/owl.carousel'),
+      ],
     },
   },
 });
