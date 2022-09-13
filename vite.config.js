@@ -4,6 +4,11 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['jquery'],
   },
+  resolve: {
+    alias: {
+      $: 'jQuery',
+    },
+  },
   plugins: [
     // Add it first
     inject({
